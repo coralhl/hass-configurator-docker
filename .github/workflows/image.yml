@@ -3,6 +3,7 @@ name: build and push
 on:
   release:
     types: [released]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,10 +20,10 @@ jobs:
       - name: build the image
         run: |
           VERSION=`cat VERSION`
-          LATESTVERSION=`curl https://raw.githubusercontent.com/CausticLab/hass-configurator-docker/master/VERSION`
-          TAGS="--tag causticlab/hass-configurator-docker:$VERSION "
+          LATESTVERSION=`curl https://raw.githubusercontent.com/coralhl/hass-configurator-docker/master/VERSION`
+          TAGS="--tag coralhl/hass-configurator-docker:$VERSION "
           if [ $VERSION == $LATESTVERSION ]; then
-            TAGS="$TAGS --tag causticlab/hass-configurator-docker:latest"
+            TAGS="$TAGS --tag coralhl/hass-configurator-docker:latest"
           fi
           docker buildx build --push \
             --build-arg HC_BUILD_VERSION=$VERSION \

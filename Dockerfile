@@ -1,5 +1,5 @@
-FROM python:3.9-alpine
-LABEL maintainer="Martin <Munsio> Treml"
+FROM python:3.11-alpine
+LABEL maintainer="Coral"
 WORKDIR /app
 
 ARG HC_BUILD_VERSION

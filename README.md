@@ -9,7 +9,7 @@ Linux x32/64 and ARM (raspberry) builds for the hass-configurator
 Example docker-compose.yaml
 ```yaml
   hass-configurator:
-    image: "causticlab/hass-configurator-docker:latest"
+    image: "coralhl/hass-configurator-docker:latest"
     restart: always
     ports:
       - "3218:3218/tcp"

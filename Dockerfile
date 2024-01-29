@@ -1,5 +1,6 @@
 FROM python:3.11-alpine
-LABEL maintainer="Coral"
+LABEL maintainer="coral"
+
 WORKDIR /app
 
 ARG HC_BUILD_VERSION=0.5.2

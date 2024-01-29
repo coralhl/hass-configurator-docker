@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -f /config/settings.conf ]; then
     echo "No configuration file found proceeding with default values"

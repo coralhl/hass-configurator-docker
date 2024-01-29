@@ -7,8 +7,6 @@ steps:
       password:
         from_secret: dockerhub_password
       repo: coralhl/hass-configurator-docker
-      platform: linux/amd64
-      platform: linux/arm64
       tags:
       - latest
       - 0.5.2

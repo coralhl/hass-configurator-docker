@@ -1,0 +1,12 @@
+steps:
+  build:
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: dockerhub_username
+      password:
+        from_secret: dockerhub_password
+      repo: coralhl/hass-configurator-docker
+      tags:
+      - latest
+      - 0.5.2

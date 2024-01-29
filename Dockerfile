@@ -2,7 +2,7 @@ FROM python:3.11-alpine
 LABEL maintainer="Coral"
 WORKDIR /app
 
-ARG HC_BUILD_VERSION
+ARG HC_BUILD_VERSION=0.5.2
 
 RUN apk update && \
     apk upgrade && \

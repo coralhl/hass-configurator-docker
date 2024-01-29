@@ -11,7 +11,7 @@ RUN apk update && \
     pip install --no-cache-dir hass-configurator==${HC_BUILD_VERSION} gitpython pyotp
 
 COPY ./run.sh /app/
-RUN chmod a+x ./run.sh
+RUN chmod a+x /app/run.sh
 
 EXPOSE 3218
 VOLUME /config
